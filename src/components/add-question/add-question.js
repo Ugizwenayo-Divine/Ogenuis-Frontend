@@ -154,7 +154,7 @@ class AddQuestion extends Component {
                     <ListGroup>
                     {this.state.choices.map(item => {return( 
               
-                        <ListGroup.Item action 
+                        <ListGroup.Item variant="dark" action 
                           key={item.id} 
                           onClick = { () => this.deleteItem('choice',item.id) }> 
                           {item.value} 

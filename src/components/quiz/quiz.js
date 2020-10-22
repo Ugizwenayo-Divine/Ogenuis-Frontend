@@ -28,6 +28,10 @@ class AllQuestions extends Component {
     getQuestions();
   }
   componentWillReceiveProps(nextProps) {
+    
+    if(this.props.quizMarks){
+      this.setState({visible:true});
+      }
     const alertMessage =
       (nextProps.questionErrors && toast.error(nextProps.questionErrors));
     return !nextProps.quizLoading && alertMessage;
@@ -66,7 +70,9 @@ class AllQuestions extends Component {
       quizAnswer:Object.values(newArr)
     }
     answerQuestions(data);
-    this.setState({visible:true});
+    // if(this.props.quizMarks){
+    // this.setState({visible:true});
+    // }
 
   };
   viewMaks=() =>{
